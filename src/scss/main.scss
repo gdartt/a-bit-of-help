@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Noto+Sans:wght@400;700&family=Rubik:wght@600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Noto+Sans:wght@400;700&family=Rubik:wght@600;700&display=swap");
 
-@import './settings/reset';
+@import "./settings/reset";
 
-@import './settings/fonts';
-@import './settings/colors';
-@import './settings/variables';
+@import "./settings/base";
 
-@import './elements/app';
+@import "./settings/fonts";
+@import "./settings/colors";
+@import "./settings/variables";
+
+@import "./elements/app";
+@import "./elements/banner";

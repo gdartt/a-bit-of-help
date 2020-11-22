@@ -1,0 +1,36 @@
+.header {
+    position: absolute;
+    height: 100vh;
+
+    .header-banner {
+        position: relative;
+        height: calc(100vh + 590.6953125px);
+        width: 100vw;
+        overflow: hidden;
+        top: -590.6953125px;
+        left: 0;
+        background: transparent url("../../assets/TLO\ I\ GRAFIKA.png") 0 0
+            no-repeat padding-box;
+    }
+
+    .header-title {
+        position: absolute;
+        bottom: 270px;
+        width: 416px;
+        margin-left: 140px;
+        font-family: $font-base;
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 55px;
+        text-transform: uppercase;
+
+        .light {
+            color: $header-top;
+            padding-bottom: 20px;
+        }
+
+        .dark {
+            color: $header-bottom;
+        }
+    }
+}
