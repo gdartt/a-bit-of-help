@@ -2,7 +2,7 @@
     position: absolute;
     height: 100vh;
 
-    div {
+    .header-banner {
         position: relative;
         height: calc(100vh + 590.6953125px);
         width: 100vw;
@@ -11,5 +11,23 @@
         left: 0;
         background: transparent url("../../assets/TLO\ I\ GRAFIKA.png") 0 0
             no-repeat padding-box;
+    }
+
+    .header-title {
+        position: absolute;
+        top: 1000px;
+        width: 416px;
+        font-family: $font-base;
+        font-weight: 700;
+        font-size: 52px;
+        text-transform: uppercase;
+
+        .light {
+            color: $header-top;
+        }
+
+        .dark {
+            color: $header-bottom;
+        }
     }
 }
