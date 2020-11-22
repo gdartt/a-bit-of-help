@@ -15,15 +15,18 @@
 
     .header-title {
         position: absolute;
-        top: 1000px;
+        bottom: 270px;
         width: 416px;
+        margin-left: 140px;
         font-family: $font-base;
         font-weight: 700;
         font-size: 52px;
+        line-height: 55px;
         text-transform: uppercase;
 
         .light {
             color: $header-top;
+            padding-bottom: 20px;
         }
 
         .dark {
