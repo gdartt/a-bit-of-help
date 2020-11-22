@@ -1,7 +1,15 @@
 .header {
+    position: absolute;
     height: 100vh;
-    top: -590.6953125px;
-    left: -3px;
-    background: transparent url("../../assets/TLO\ I\ GRAFIKA.png") 40% 50%
-        no-repeat padding-box;
+
+    div {
+        position: relative;
+        height: calc(100vh + 590.6953125px);
+        width: 100vw;
+        overflow: hidden;
+        top: -590.6953125px;
+        left: 0;
+        background: transparent url("../../assets/TLO\ I\ GRAFIKA.png") 0 0
+            no-repeat padding-box;
+    }
 }
