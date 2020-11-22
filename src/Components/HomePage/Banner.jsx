@@ -1,6 +1,8 @@
 
 const Banner = () => (
-    <h1>Hello</h1>
+    <header className="header">
+        
+    </header>
 );
 
 export default Banner;
