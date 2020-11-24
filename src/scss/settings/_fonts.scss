@@ -2,6 +2,26 @@
 // font-family: 'Noto Sans', sans-serif;
 // font-family: 'Rubik', sans-serif;
 
-$font-base: 'Rubik', sans-serif;
-$font-secondary: 'Noto Sans', sans-serif;
-$font-alternative: 'Lato', sans-serif;
+$font-base: "Rubik", sans-serif;
+$font-secondary: "Noto Sans", sans-serif;
+$font-alternative: "Lato", sans-serif;
+
+.nav-font {
+    font-family: $font-base;
+    font-size: $font-nav;
+    letter-spacing: $letters-sl;
+    font-weight: bold;
+    line-height: $line-sl;
+    text-align: center;
+    color: $white;
+}
+
+.footer-font {
+    font-family: $font-base;
+    font-size: $font-footer;
+    letter-spacing: $letters-ss;
+    font-weight: bold;
+    line-height: $line-sl;
+    text-align: left;
+    color: $dark-blue;
+}
