@@ -6,7 +6,7 @@ const Banner = () => (
                 <h2 className="light">Ludzie i nowe technologie</h2>
                 <h2 className="dark">Wsparcie dla organizacji pozarządowych</h2>
             </div>
-        </div>
+        </div> 
     </header>
 );
 

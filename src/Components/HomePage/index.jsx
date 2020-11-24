@@ -4,7 +4,7 @@ const HomePage = () => (
     <>
         <Banner />
     </>
-);
+); 
 
 export default HomePage;
 
