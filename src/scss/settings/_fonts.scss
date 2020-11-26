@@ -6,22 +6,35 @@ $font-base: "Rubik", sans-serif;
 $font-secondary: "Noto Sans", sans-serif;
 $font-alternative: "Lato", sans-serif;
 
+//TODO: minimalne fonty do poprawy po ustaleniu
+/* ----------------
+   HEADER FONTS
+------------------ */
+.header-font--top {
+    @include fontConfig(
+        $font-base,
+        $line-xl,
+        $white,
+        $letters-ms,
+        $align: left
+    );
+    font-size: fontClamp(2, $font-header-max);
+}
+
+.header-font--bottom {
+    @include fontConfig($font-base, $line-xl, $light-blue, $align: left);
+    font-size: fontClamp(2, $font-header-max);
+}
+
+/* ----------------
+  COMPONENTS FONTS
+------------------ */
 .nav-font {
-    font-family: $font-base;
-    font-size: $font-nav;
-    letter-spacing: $letters-sl;
-    font-weight: bold;
-    line-height: $line-sl;
-    text-align: center;
-    color: $white;
+    @include fontConfig($font-base, $line-sl, $white, $letters-ss);
+    font-size: fontClamp(1, $font-nav-max);
 }
 
 .footer-font {
-    font-family: $font-base;
-    font-size: $font-footer;
-    letter-spacing: $letters-ss;
-    font-weight: bold;
-    line-height: $line-sl;
-    text-align: left;
-    color: $dark-blue;
+    @include fontConfig($font-base, $line-sl, $dark-blue, $align: left);
+    font-size: fontClamp(1, $font-footer-max);
 }

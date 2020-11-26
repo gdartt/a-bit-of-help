@@ -1,14 +1,13 @@
 /* ----------------
-LETTER SPACING
+  LETTER SPACING
 ------------------ */
-$letters-ss: 0px;
-$letters-sl: 1px;
-$letters-ms: 1.25px;
-$letters-ml: 2.08px;
+$letters-ss: 1px;
+$letters-sl: 1.25px;
+$letters-ms: 2.08px;
 $letters-xl: 6px;
 
 /* ----------------
-LINE HEIGHT
+    LINE HEIGHT
 ------------------ */
 $line-ss: 2.2rem;
 $line-sl: 2.4rem;
@@ -20,5 +19,7 @@ $line-xl: 5.5rem;
 /* ----------------
 COMPONENTS FONT SIZE
 ------------------ */
-$font-nav: 2rem;
-$font-footer: 2rem;
+$font-header-top-max: 5.5; // rem
+$font-header-bottom-max: 5.2; // rem
+$font-nav-max: 2; // rem
+$font-footer-max: 2; // rem
