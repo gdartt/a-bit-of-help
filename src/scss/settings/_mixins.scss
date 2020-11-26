@@ -1,16 +1,16 @@
 // base font configuration
 @mixin fontConfig(
     $family,
-    $height,
     $color,
     $spacing: 0,
     $weight: bold,
-    $align: center
+    $align: left,
+    $transform: uppercase
 ) {
     font-family: $family;
     letter-spacing: $spacing;
-    line-height: $height;
     color: $color;
     font-weight: $weight;
     text-align: $align;
+    text-transform: $transform;
 }
