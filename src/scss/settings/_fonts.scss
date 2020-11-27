@@ -11,84 +11,100 @@ $font-alternative: "Lato", sans-serif;
 /* ----------------
       HEADER
 ------------------ */
-.header-font-title--top {
-    @include fontConfig($font-base, $line-xl, $white, $letters-ms);
-    font-size: fontClamp(2, $font-header-max);
+.header {
+    &__font-title {
+        &--top {
+            @include fontConfig($font-base, $line-xl, $white, $letters-ms);
+            font-size: fontClamp(2, $font-header-max);
+        }
+
+        &--bottom {
+            @include fontConfig($font-base, $line-xl, $blue);
+            font-size: fontClamp(2, $font-header-max);
+        }
+    }
 }
 
-.header-font-title--bottom {
-    @include fontConfig($font-base, $line-xl, $blue);
-    font-size: fontClamp(2, $font-header-max);
-}
-
-.nav-font {
-    @include fontConfig(
-        $font-base,
-        $line-sl,
-        $white,
-        $letters-ss,
-        $align: center
-    );
-    font-size: fontClamp(1, $font-nav-max);
+.nav {
+    &__font {
+        @include fontConfig(
+            $font-base,
+            $line-sl,
+            $white,
+            $letters-ss,
+            $align: center
+        );
+        font-size: fontClamp(1, $font-nav-max);
+    }
 }
 
 /* ----------------
       ABOUT
 ------------------ */
-.about-font-title--top {
-    @include fontConfig($font-base, $line-xl, $white, $letters-ms);
-    font-size: fontClamp(2, $font-about-title-max);
+.about {
+    &__font-title {
+        &--top {
+            @include fontConfig($font-base, $line-xl, $white, $letters-ms);
+            font-size: fontClamp(2, $font-about-title-max);
 
-    span {
-        color: $light-blue;
+            span {
+                color: $light-blue;
+            }
+        }
+
+        &--bottom {
+            @include fontConfig($font-base, $line-xl, $light-blue, $letters-ms);
+            font-size: fontClamp(2, $font-about-title-max);
+
+            span {
+                color: $dark-blue;
+            }
+        }
     }
-}
 
-.about-font-title--bottom {
-    @include fontConfig($font-base, $line-xl, $light-blue, $letters-ms);
-    font-size: fontClamp(2, $font-about-title-max);
+    &__font-subtitle {
+        &--top {
+            @include fontConfig($font-secondary, $line-ml, $orange);
+            font-size: fontClamp(1.5, $font-about-subtitle-max);
+        }
 
-    span {
-        color: $dark-blue;
+        &--bottom {
+            @include fontConfig($font-secondary, $line-ml, $dark-blue);
+            font-size: fontClamp(1.5, $font-about-subtitle-max);
+        }
     }
-}
 
-.about-font-subtitle--top {
-    @include fontConfig($font-secondary, $line-ml, $orange);
-    font-size: fontClamp(1.5, $font-about-subtitle-max);
-}
+    &__font-paragraph {
+        &--top {
+            @include fontConfig(
+                $font-secondary,
+                $line-sl,
+                $blue,
+                $weight: normal,
+                $transform: none
+            );
+            font-size: fontClamp(1, $font-about-paragraph-max);
+        }
 
-.about-font-subtitle--bottom {
-    @include fontConfig($font-secondary, $line-ml, $dark-blue);
-    font-size: fontClamp(1.5, $font-about-subtitle-max);
-}
-
-.about-font-paragraph--top {
-    @include fontConfig(
-        $font-secondary,
-        $line-sl,
-        $blue,
-        $weight: normal,
-        $transform: none
-    );
-    font-size: fontClamp(1, $font-about-paragraph-max);
-}
-
-.about-font-paragraph--bottom {
-    @include fontConfig(
-        $font-secondary,
-        $line-sl,
-        $dark-blue,
-        $weight: normal,
-        $transform: none
-    );
-    font-size: fontClamp(1, $font-about-paragraph-max);
+        &--bottom {
+            @include fontConfig(
+                $font-secondary,
+                $line-sl,
+                $dark-blue,
+                $weight: normal,
+                $transform: none
+            );
+            font-size: fontClamp(1, $font-about-paragraph-max);
+        }
+    }
 }
 
 /* ----------------
       FOOTER
 ------------------ */
-.footer-font {
-    @include fontConfig($font-base, $line-sl, $dark-blue, $transform: none);
-    font-size: fontClamp(1, $font-footer-max);
+.footer {
+    &__font {
+        @include fontConfig($font-base, $line-sl, $dark-blue, $transform: none);
+        font-size: fontClamp(1, $font-footer-max);
+    }
 }
