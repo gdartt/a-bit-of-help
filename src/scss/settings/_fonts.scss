@@ -11,100 +11,224 @@ $font-alternative: "Lato", sans-serif;
 /* ----------------
       HEADER
 ------------------ */
-.header {
-    &__font-title {
-        &--top {
-            @include fontConfig($font-base, $line-xl, $white, $letters-ms);
-            font-size: fontClamp(2, $font-header-max);
-        }
-
-        &--bottom {
-            @include fontConfig($font-base, $line-xl, $blue);
-            font-size: fontClamp(2, $font-header-max);
-        }
-    }
+.header__font-title--top {
+    @include fontConfig($font-base, $white, $letters-ml);
+    font-size: fontClamp(2, $font-header-max);
 }
 
-.nav {
-    &__font {
-        @include fontConfig(
-            $font-base,
-            $line-sl,
-            $white,
-            $letters-ss,
-            $align: center
-        );
-        font-size: fontClamp(1, $font-nav-max);
-    }
+.header__font-title--bottom {
+    @include fontConfig($font-base, $blue);
+    font-size: fontClamp(2, $font-header-max);
+}
+
+/* ----------------
+    NAVIGATION
+------------------ */
+.nav__font {
+    @include fontConfig($font-base, $white, $letters-ss, $align: center);
+    font-size: fontClamp(1, $font-nav-max);
 }
 
 /* ----------------
       ABOUT
 ------------------ */
-.about {
-    &__font-title {
-        &--top {
-            @include fontConfig($font-base, $line-xl, $white, $letters-ms);
-            font-size: fontClamp(2, $font-about-title-max);
+.about__font-title--top {
+    @include fontConfig($font-base, $white, $letters-ml);
+    font-size: fontClamp(2, $font-about-title-max);
 
-            span {
-                color: $light-blue;
-            }
-        }
-
-        &--bottom {
-            @include fontConfig($font-base, $line-xl, $light-blue, $letters-ms);
-            font-size: fontClamp(2, $font-about-title-max);
-
-            span {
-                color: $dark-blue;
-            }
-        }
+    span {
+        color: $light-blue;
     }
+}
 
-    &__font-subtitle {
-        &--top {
-            @include fontConfig($font-secondary, $line-ml, $orange);
-            font-size: fontClamp(1.5, $font-about-subtitle-max);
-        }
+.about__font-title--bottom {
+    @include fontConfig($font-base, $light-blue, $letters-ml);
+    font-size: fontClamp(2, $font-about-title-max);
 
-        &--bottom {
-            @include fontConfig($font-secondary, $line-ml, $dark-blue);
-            font-size: fontClamp(1.5, $font-about-subtitle-max);
-        }
+    span {
+        color: $dark-blue;
     }
+}
 
-    &__font-paragraph {
-        &--top {
-            @include fontConfig(
-                $font-secondary,
-                $line-sl,
-                $blue,
-                $weight: normal,
-                $transform: none
-            );
-            font-size: fontClamp(1, $font-about-paragraph-max);
-        }
+.about__font-subtitle--top {
+    @include fontConfig($font-secondary, $orange);
+    font-size: fontClamp(1.5, $font-about-subtitle-max);
+}
 
-        &--bottom {
-            @include fontConfig(
-                $font-secondary,
-                $line-sl,
-                $dark-blue,
-                $weight: normal,
-                $transform: none
-            );
-            font-size: fontClamp(1, $font-about-paragraph-max);
-        }
+.about__font-subtitle--bottom {
+    @include fontConfig($font-secondary, $dark-blue);
+    font-size: fontClamp(1.5, $font-about-subtitle-max);
+}
+
+.about__font-paragraph--top {
+    @include fontConfig(
+        $font-secondary,
+        $blue,
+        $weight: normal,
+        $transform: none
+    );
+    font-size: fontClamp(1, $font-about-paragraph-max);
+}
+
+.about__font-paragraph--bottom {
+    @include fontConfig(
+        $font-secondary,
+        $dark-blue,
+        $weight: normal,
+        $transform: none
+    );
+    font-size: fontClamp(1, $font-about-paragraph-max);
+}
+
+/* ----------------
+     PROJECTS
+------------------ */
+.projects__font-title {
+    @include fontConfig($font-base, $white, $letters-ml);
+    font-size: fontClamp(2, $font-projects-title-max);
+
+    span {
+        color: $light-blue;
     }
+}
+
+.projects__font-subtitle {
+    @include fontConfig($font-secondary, $orange);
+    font-size: fontClamp(1.5, $font-projects-subtitle-max);
+}
+
+.projects__font-subtitle--minor {
+    @include fontConfig(
+        $font-secondary,
+        $orange,
+        $weight: normal,
+        $transform: none
+    );
+    font-size: fontClamp(1, $font-projects-subtitle-minor-max);
+}
+
+.projects__font-paragraph {
+    @include fontConfig(
+        $font-secondary,
+        $blue,
+        $weight: normal,
+        $transform: none
+    );
+    font-size: fontClamp(1, $font-projects-paragraph-max);
+}
+
+.projects__font-paragraph--minor {
+    @include fontConfig(
+        $font-secondary,
+        $blue,
+        $weight: normal,
+        $transform: none
+    );
+    font-size: fontClamp(1, $font-projects-paragraph-minor-max);
+}
+
+/* ----------------
+      JOIN US
+------------------ */
+.join__font-title {
+    @include fontConfig($font-base, $dark-blue, $letters-ms, $align: center);
+    font-size: fontClamp(1.5, $font-join-title-max);
+}
+
+.join__font-paragraph {
+    @include fontConfig(
+        $font-secondary,
+        $blue,
+        $weight: normal,
+        $transform: none
+    );
+    font-size: fontClamp(1.25, $join__font-paragraph-max);
+}
+
+.join__font-form--input {
+    @include fontConfig(
+        $font-secondary,
+        $gray,
+        $weight: normal,
+        $transform: none
+    );
+    font-size: fontClamp(1, $join__font-form--input-max);
+}
+
+.join__font-form--textarea {
+    @include fontConfig(
+        $font-alternative,
+        $gray,
+        $letters-sx,
+        $transform: none
+    );
+    font-size: fontClamp(1, $join__font-form--textarea-max);
+}
+
+.join__font-form--btn {
+    @include fontConfig($font-alternative, $white, $letters-sx, $align: center);
+    font-size: fontClamp(1.1, $join__font-form--btn-max);
+}
+
+.join__font-form--link {
+    @include fontConfig(
+        $font-alternative,
+        $dark-blue,
+        $weight: normal,
+        $align: center,
+        $transform: none,
+        $decoration: underline
+    );
+    font-size: fontClamp(1.1, $join__font-form--link-max);
+}
+
+/* ----------------
+      CONTACT
+------------------ */
+.contact__font-title {
+    @include fontConfig($font-base, $dark-blue, $letters-ms, $align: center);
+    font-size: fontClamp(1.5, $contact__font-title-max);
+}
+
+.contact__font-paragraph {
+    @include fontConfig(
+        $font-secondary,
+        $blue,
+        $weight: normal,
+        $align: center
+    );
+    font-size: fontClamp(1.25, $contact__font-paragraph-max);
+}
+
+.contact__font-form--input {
+    @include fontConfig(
+        $font-secondary,
+        $gray,
+        $weight: normal,
+        $transform: none
+    );
+    font-size: fontClamp(1, $contact__font-form--input-max);
+}
+
+.contact__font-form--textarea {
+    @include fontConfig(
+        $font-alternative,
+        $gray,
+        $letters-sx,
+        $transform: none
+    );
+    font-size: fontClamp(1, $contact__font-form--textarea-max);
+}
+
+.contact__font-form--btn {
+    @include fontConfig($font-alternative, $white, $letters-sx, $align: center);
+    font-size: fontClamp(1.1, $contact__font-form--btn-max);
 }
 
 /* ----------------
       FOOTER
 ------------------ */
-.footer {
-    &__font {
-        @include fontConfig($font-base, $line-sl, $dark-blue, $transform: none);
-        font-size: fontClamp(1, $font-footer-max);
-    }
+.footer__font {
+    @include fontConfig($font-base, $dark-blue, $transform: none);
+    font-size: fontClamp(1, $font-footer-max);
 }

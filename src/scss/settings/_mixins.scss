@@ -5,12 +5,14 @@
     $spacing: 0,
     $weight: bold,
     $align: left,
-    $transform: uppercase
+    $transform: uppercase,
+    $decoration: none
 ) {
     font-family: $family;
-    letter-spacing: $spacing;
     color: $color;
+    letter-spacing: $spacing;
     font-weight: $weight;
     text-align: $align;
     text-transform: $transform;
+    text-decoration: $decoration;
 }

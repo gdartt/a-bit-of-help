@@ -1,9 +1,11 @@
 /* ----------------
   LETTER SPACING
 ------------------ */
+$letters-sx: 0.38px;
 $letters-ss: 1px;
 $letters-sl: 1.25px;
-$letters-ms: 2.08px;
+$letters-ms: 1.64px;
+$letters-ml: 2.08px;
 $letters-xl: 6px;
 
 /* ----------------
@@ -13,7 +15,7 @@ $letters-xl: 6px;
 $line-ss: 2.2rem;
 $line-sl: 2.4rem;
 $line-ms: 2.6rem;
-$line-ml: 3.9rem;
+$line-ml: 2.9rem;
 $line-xs: 4.4rem;
 $line-xl: 5.5rem;
 
@@ -24,5 +26,21 @@ $font-header-max: 5.2; // rem
 $font-about-title-max: 5.2; // rem
 $font-about-subtitle-max: 2.5; // rem
 $font-about-paragraph-max: 2.2; // rem
+$font-projects-title-max: 5.2; // rem
+$font-projects-subtitle-max: 2.5; // rem
+$font-projects-subtitle-minor-max: 1.6; // rem
+$font-projects-paragraph-max: 2.2; // rem
+$font-projects-paragraph-minor-max: 1.6; // rem
+$font-join-title-max: 4.1; // rem
+$join__font-paragraph-max: 2.1; // rem
+$join__font-form--input-max: 1.5; // rem
+$join__font-form--textarea-max: 1.6; // rem
+$join__font-form--btn-max: 1.7; // rem
+$join__font-form--link-max: 1.8; // rem
+$contact__font-title-max: 4.1; // rem
+$contact__font-paragraph-max: 2.2; // rem
+$contact__font-form--input-max: 1.5; // rem
+$contact__font-form--textarea-max: 1.6; //rem
+$contact__font-form--btn-max: 1.7; // rem
 $font-nav-max: 2; // rem
 $font-footer-max: 2; // rem
