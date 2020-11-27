@@ -6,6 +6,7 @@ $letters-ss: 1px;
 $letters-sl: 1.25px;
 $letters-ms: 1.64px;
 $letters-ml: 2.08px;
+$letters-xs: 4px;
 $letters-xl: 6px;
 
 /* ----------------
@@ -32,15 +33,18 @@ $font-projects-subtitle-minor-max: 1.6; // rem
 $font-projects-paragraph-max: 2.2; // rem
 $font-projects-paragraph-minor-max: 1.6; // rem
 $font-join-title-max: 4.1; // rem
-$join__font-paragraph-max: 2.1; // rem
-$join__font-form--input-max: 1.5; // rem
-$join__font-form--textarea-max: 1.6; // rem
-$join__font-form--btn-max: 1.7; // rem
-$join__font-form--link-max: 1.8; // rem
-$contact__font-title-max: 4.1; // rem
-$contact__font-paragraph-max: 2.2; // rem
-$contact__font-form--input-max: 1.5; // rem
-$contact__font-form--textarea-max: 1.6; //rem
-$contact__font-form--btn-max: 1.7; // rem
+$font-join-paragraph-max: 2.1; // rem
+$font-join-form--input-max: 1.5; // rem
+$font-join-form--textarea-max: 1.6; // rem
+$font-join-form--btn-max: 1.7; // rem
+$font-join-form--btn-active-max: 2; // rem
+$font-join-form--link-max: 1.8; // rem
+$font-contact-title-max: 4.1; // rem
+$font-contact-paragraph-max: 2.2; // rem
+$font-contact-form--input-max: 1.5; // rem
+$font-contact-form--textarea-max: 1.6; //rem
+$font-contact-form--btn-max: 1.7; // rem
+$font-contact-form--btn-active-max: 2; // rem
 $font-nav-max: 2; // rem
+$font-nav--click-max: 2.5; // rem
 $font-footer-max: 2; // rem

@@ -27,6 +27,21 @@ $font-alternative: "Lato", sans-serif;
 .nav__font {
     @include fontConfig($font-base, $white, $letters-ss, $align: center);
     font-size: fontClamp(1, $font-nav-max);
+
+    &:hover {
+        @include fontConfig(
+            $font-base,
+            $light-blue,
+            $letters-xl,
+            $align: center
+        );
+    }
+
+    .active, // NOTE: możliwe, że trzeba będzie to skorygować
+    &:active {
+        @include fontConfig($font-base, $pink, $letters-sl, $align: center);
+        font-size: fontClamp(1, $font-nav--click-max);
+    }
 }
 
 /* ----------------
@@ -120,7 +135,7 @@ $font-alternative: "Lato", sans-serif;
 .projects__font-paragraph--minor {
     @include fontConfig(
         $font-secondary,
-        $blue,
+        $light-blue,
         $weight: normal,
         $transform: none
     );
@@ -142,7 +157,7 @@ $font-alternative: "Lato", sans-serif;
         $weight: normal,
         $transform: none
     );
-    font-size: fontClamp(1.25, $join__font-paragraph-max);
+    font-size: fontClamp(1.25, $font-join-paragraph-max);
 }
 
 .join__font-form--input {
@@ -152,7 +167,7 @@ $font-alternative: "Lato", sans-serif;
         $weight: normal,
         $transform: none
     );
-    font-size: fontClamp(1, $join__font-form--input-max);
+    font-size: fontClamp(1, $font-join-form--input-max);
 }
 
 .join__font-form--textarea {
@@ -162,12 +177,21 @@ $font-alternative: "Lato", sans-serif;
         $letters-sx,
         $transform: none
     );
-    font-size: fontClamp(1, $join__font-form--textarea-max);
+    font-size: fontClamp(1, $font-join-form--textarea-max);
 }
 
 .join__font-form--btn {
     @include fontConfig($font-alternative, $white, $letters-sx, $align: center);
-    font-size: fontClamp(1.1, $join__font-form--btn-max);
+    font-size: fontClamp(1.1, $font-join-form--btn-max);
+
+    &:hover {
+        text-align: $letters-ml;
+    }
+
+    &:active {
+        text-align: $letters-xs;
+        font-size: fontClamp(1.2, $font-join-form--btn-active-max);
+    }
 }
 
 .join__font-form--link {
@@ -179,7 +203,7 @@ $font-alternative: "Lato", sans-serif;
         $transform: none,
         $decoration: underline
     );
-    font-size: fontClamp(1.1, $join__font-form--link-max);
+    font-size: fontClamp(1.1, $font-join-form--link-max);
 }
 
 /* ----------------
@@ -187,7 +211,7 @@ $font-alternative: "Lato", sans-serif;
 ------------------ */
 .contact__font-title {
     @include fontConfig($font-base, $dark-blue, $letters-ms, $align: center);
-    font-size: fontClamp(1.5, $contact__font-title-max);
+    font-size: fontClamp(1.5, $font-contact-title-max);
 }
 
 .contact__font-paragraph {
@@ -195,9 +219,10 @@ $font-alternative: "Lato", sans-serif;
         $font-secondary,
         $blue,
         $weight: normal,
-        $align: center
+        $align: center,
+        $transform: none
     );
-    font-size: fontClamp(1.25, $contact__font-paragraph-max);
+    font-size: fontClamp(1.25, $font-contact-paragraph-max);
 }
 
 .contact__font-form--input {
@@ -207,7 +232,7 @@ $font-alternative: "Lato", sans-serif;
         $weight: normal,
         $transform: none
     );
-    font-size: fontClamp(1, $contact__font-form--input-max);
+    font-size: fontClamp(1, $font-contact-form--input-max);
 }
 
 .contact__font-form--textarea {
@@ -217,12 +242,21 @@ $font-alternative: "Lato", sans-serif;
         $letters-sx,
         $transform: none
     );
-    font-size: fontClamp(1, $contact__font-form--textarea-max);
+    font-size: fontClamp(1, $font-contact-form--textarea-max);
 }
 
 .contact__font-form--btn {
     @include fontConfig($font-alternative, $white, $letters-sx, $align: center);
-    font-size: fontClamp(1.1, $contact__font-form--btn-max);
+    font-size: fontClamp(1.1, $font-contact-form--btn-max);
+
+    &:hover {
+        text-align: $letters-ml;
+    }
+
+    &:active {
+        text-align: $letters-xs;
+        font-size: fontClamp(1.2, $font-contact-form--btn-active-max);
+    }
 }
 
 /* ----------------
