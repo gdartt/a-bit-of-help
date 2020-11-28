@@ -12,7 +12,7 @@ $letters-xl: 6px;
 /* ----------------
     LINE HEIGHT
 ------------------ */
-// NOTE: ewentualna zmiana na wartosci absolutne
+// NOTE: ewentualna zmiana na wartosci absolutne po uzgodnieniach
 $line-ss: 2.2rem;
 $line-sl: 2.4rem;
 $line-ms: 2.6rem;
@@ -23,28 +23,31 @@ $line-xl: 5.5rem;
 /* ----------------
 COMPONENTS FONT SIZE
 ------------------ */
-$font-header-max: 5.2; // rem
-$font-about-title-max: 5.2; // rem
-$font-about-subtitle-max: 2.5; // rem
-$font-about-paragraph-max: 2.2; // rem
-$font-projects-title-max: 5.2; // rem
-$font-projects-subtitle-max: 2.5; // rem
-$font-projects-subtitle-minor-max: 1.6; // rem
-$font-projects-paragraph-max: 2.2; // rem
-$font-projects-paragraph-minor-max: 1.6; // rem
-$font-join-title-max: 4.1; // rem
-$font-join-paragraph-max: 2.1; // rem
-$font-join-form--input-max: 1.5; // rem
-$font-join-form--textarea-max: 1.6; // rem
-$font-join-form--btn-max: 1.7; // rem
-$font-join-form--btn-active-max: 2; // rem
-$font-join-form--link-max: 1.8; // rem
-$font-contact-title-max: 4.1; // rem
-$font-contact-paragraph-max: 2.2; // rem
-$font-contact-form--input-max: 1.5; // rem
-$font-contact-form--textarea-max: 1.6; //rem
-$font-contact-form--btn-max: 1.7; // rem
-$font-contact-form--btn-active-max: 2; // rem
-$font-nav-max: 2; // rem
-$font-nav--click-max: 2.5; // rem
-$font-footer-max: 2; // rem
+// NOTE: wszystkie wartości min do ustalenia
+$font-main-title-max: 5.2; // rem
+$font-main-title-min: 2; // rem
+$font-main-subtitle-max: 2.5; // rem
+$font-main-subtitle-min: 1.25; // rem
+$font-main-paragraph-max: 2.2; // rem
+$font-main-paragraph-min: 1; // rem
+
+$font-minor-title-max: 4.1; // rem
+$font-minor-title-min: 1.5; // rem
+$font-minor-paragraph-max: 2.15; // rem
+$font-minor-paragraph-min: 1.05; // rem
+$font-minor-component-max: 1.6; // rem
+$font-minor-component-min: 0.8; // rem
+
+$font-form--input-max: 1.5; // rem
+$font-form--input-min: 0.75; // rem
+$font-form--btn-max: 1.7; // rem
+$font-form--btn-min: 0.8; // rem
+$font-form--btn-active-max: 2; // rem
+$font-form--btn-active-min: 1; // rem
+$font-form--link-max: 1.8; // rem
+$font-form--link-min: 0.9; // rem
+
+$font-bar-max: 2; // rem
+$font-bar-min: 0.85; // rem
+$font-bar--click-max: 2.5; // rem
+$font-bar--click-min: 1.2; // rem
