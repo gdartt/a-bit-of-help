@@ -4,9 +4,9 @@ $font-alternative: "Lato", sans-serif;
 
 // TODO: minimalne fonty do poprawy po ustaleniu
 // TODO: dorobic clamp na line-height po ustaleniach
-/* ----------------
+/*******************
     FONT SIZES
------------------- */
+*******************/
 .header__font-title--top,
 .header__font-title--bottom,
 .about__font-title--top,
@@ -74,9 +74,9 @@ $font-alternative: "Lato", sans-serif;
     font-size: fontClamp($font-bar--click-min, $font-bar--click-max);
 }
 
-/* ----------------
+/*******************
   REST FONT STYLES
------------------- */
+********************/
 .header__font-title--top {
     @include fontConfig($font-base, $white, $letters-ml);
 }

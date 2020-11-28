@@ -1,6 +1,6 @@
-/* ----------------
-  LETTER SPACING
------------------- */
+/********************
+   LETTER SPACING
+********************/
 $letters-sx: 0.38px;
 $letters-ss: 1px;
 $letters-sl: 1.25px;
@@ -9,9 +9,9 @@ $letters-ml: 2.08px;
 $letters-xs: 4px;
 $letters-xl: 6px;
 
-/* ----------------
+/********************
     LINE HEIGHT
------------------- */
+********************/
 // NOTE: ewentualna zmiana na wartosci absolutne po uzgodnieniach
 $line-ss: 2.2rem;
 $line-sl: 2.4rem;
@@ -20,9 +20,9 @@ $line-ml: 2.9rem;
 $line-xs: 4.4rem;
 $line-xl: 5.5rem;
 
-/* ----------------
-COMPONENTS FONT SIZE
------------------- */
+/********************
+ COMPONENTS FONT SIZE
+********************/
 // NOTE: wszystkie wartości min do ustalenia
 $font-main-title-max: 5.2; // rem
 $font-main-title-min: 2; // rem
