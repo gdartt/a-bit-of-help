@@ -1,6 +1,6 @@
 # Predefinaned fonts for components
 
-**Usage:**
+**Class usage:**
 
 ## Hero page
 
