@@ -1,0 +1,36 @@
+@import "../../styles/main.scss";
+
+footer {
+    width: 100vw;
+    height: 15vh;
+    min-height: 75px;
+    background-color: $footer-background;
+    position: absolute;
+    bottom: 0;
+
+    a {
+        height: 38%;
+    }
+
+    img {
+        width: 100%;
+        min-width: 75px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        li {
+            margin: 0 1.7vw;
+            text-align: center;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
