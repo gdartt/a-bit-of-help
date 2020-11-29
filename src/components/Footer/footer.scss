@@ -1,0 +1,18 @@
+footer {
+    display: flex;
+    width: 100vw;
+    height: 150px;
+    align-items: center;
+    background-color: #f6a509;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: large;
+
+    ul {
+        li {
+            display: inline;
+            margin: 0 34px;
+        }
+    }
+}
