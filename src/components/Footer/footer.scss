@@ -1,18 +1,30 @@
+@import "../../styles/main.scss";
+
 footer {
-    display: flex;
     width: 100vw;
     height: 150px;
-    align-items: center;
-    background-color: #f6a509;
+    background-color: $footer-background;
     position: absolute;
     bottom: 0;
-    left: 0;
-    font-size: large;
+
+    a {
+        margin-right: auto;
+    }
+
+    img {
+        width: 100%;
+    }
 
     ul {
         li {
             display: inline;
-            margin: 0 34px;
+            margin: 0 25px;
         }
     }
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
