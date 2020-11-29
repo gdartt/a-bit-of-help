@@ -1,1 +1,12 @@
 @import "../../styles/main.scss";
+
+.header {
+    display: flex;
+    height: 100vh;
+    width: 23vw;
+    align-items: center;
+
+    h1 {
+        padding: 10px;
+    }
+}
