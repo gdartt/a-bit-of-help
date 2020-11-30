@@ -69,10 +69,8 @@ $font-alternative: "Lato", sans-serif;
 .footer__font {
     font-size: fontClamp($font-bar-min, $font-bar-max);
 }
-.nav__font .active, // NOTE: możliwe, że trzeba będzie skorygować .active
-.nav__font:active {
-    font-size: fontClamp($font-bar--click-min, $font-bar--click-max);
-}
+
+// .active, // NOTE: możliwe, że trzeba będzie skorygować .active
 
 /*******************
   REST FONT STYLES
@@ -212,13 +210,18 @@ $font-alternative: "Lato", sans-serif;
 .nav__font {
     @include fontConfig($font-base, $white, $letters-ss, $align: center);
 
-    &:hover {
+    &:hover::before {
         @include fontConfig(
             $font-base,
             $light-blue,
             $letters-xl,
             $align: center
         );
+    }
+
+    &:active::before {
+        font-size: fontClamp($font-bar--click-min, $font-bar--click-max);
+        color: $pink;
     }
 
     .active {
