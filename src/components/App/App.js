@@ -1,14 +1,15 @@
 import "./App.scss";
 
+import Nav from '../Nav';
 import Footer from '../Footer';
 import Banner from '../Banner';
 
 function App() {
   return (
     <div className="app">
-        <p>A Bit Of Help</p>
-        <Banner />
-        <Footer />
+      <Nav />
+      <Banner />
+      <Footer />
     </div>
   );
 }

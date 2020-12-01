@@ -65,14 +65,11 @@ $font-alternative: "Lato", sans-serif;
     font-size: fontClamp($font-form--link-min, $font-form--link-max);
 }
 
-.nav__font,
 .footer__font {
     font-size: fontClamp($font-bar-min, $font-bar-max);
 }
-.nav__font .active, // NOTE: możliwe, że trzeba będzie skorygować .active
-.nav__font:active {
-    font-size: fontClamp($font-bar--click-min, $font-bar--click-max);
-}
+
+// .active, // NOTE: możliwe, że trzeba będzie skorygować .active
 
 /*******************
   REST FONT STYLES
@@ -207,24 +204,6 @@ $font-alternative: "Lato", sans-serif;
 
 .contact__font-paragraph {
     text-align: center;
-}
-
-.nav__font {
-    @include fontConfig($font-base, $white, $letters-ss, $align: center);
-
-    &:hover {
-        @include fontConfig(
-            $font-base,
-            $light-blue,
-            $letters-xl,
-            $align: center
-        );
-    }
-
-    .active {
-        // NOTE: możliwe, że trzeba będzie to skorygować
-        @include fontConfig($font-base, $pink, $letters-sl, $align: center);
-    }
 }
 
 .footer__font {
