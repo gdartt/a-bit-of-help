@@ -1,15 +1,22 @@
-import React from 'react';
-import './footer.scss';
-import logoFooter from '../../assets/logoFooter.svg';
+import React from "react";
+import "./footer.scss";
+import logoFooter from "../../assets/logoFooter.svg";
 
 const Footer = () => {
-    const linksArray = ['Zgłoś projekt', 'Dołącz do naszego zespołu', 'Poszukiwane wolontariaty', 'Polityka prywatności / RODO'];
-    
+    const linksArray = [
+        "Zgłoś projekt",
+        "Dołącz do naszego zespołu",
+        "Poszukiwane wolontariaty",
+        "Polityka prywatności / RODO",
+    ];
+
     return (
         <footer>
             <div className="container">
                 <div className="footer footer__font">
-                    <a href="/"><img src={logoFooter} alt={'logo-footer'}/></a>
+                    <a href="/">
+                        <img src={logoFooter} alt={"logo-footer"} />
+                    </a>
                     <ul>
                         {linksArray.map((element, index) => (
                             <li key={index}>{element}</li>
@@ -18,7 +25,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-    )
+    );
 };
 
 export default Footer;
