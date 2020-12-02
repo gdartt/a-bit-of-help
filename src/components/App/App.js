@@ -1,5 +1,6 @@
 import "./App.scss";
 
+import Nav from '../Nav';
 import Footer from '../Footer';
 import Banner from '../Banner';
 import AboutUs from '../AboutUs';
@@ -7,10 +8,10 @@ import AboutUs from '../AboutUs';
 function App() {
   return (
     <div className="app">
-        <p>A Bit Of Help</p>
-        <Banner />
-        <AboutUs />
-        <Footer />
+      <Nav />
+      <Banner />
+      <AboutUs />
+      <Footer />
     </div>
   );
 }
