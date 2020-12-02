@@ -4,10 +4,9 @@ import { aboutUsData } from '../../db/db';
 
 const AboutUs = () => {
     return (
-        <div>
+        <div className="container">
             <section className="text">
-                <h2 className="about__font-title--top">A bit of help</h2>
-                <h2 className="about__font-title--bottom">Fundacja</h2>
+                <h2 className="about__font-title--top">A bit of help<span>Fundacja</span></h2>
                 <h3 className="about__font-subtitle--top">Innowacyjne rozwiązania dla organizacji non-profit</h3>
                 <ul>
                     {
