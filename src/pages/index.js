@@ -1,12 +1,19 @@
-import * as React from "react";
-import "../styles/main.scss";
-import App1 from "../components/App/App";
+import "../components/App/App.scss";
+
+import React from "react";
+
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
+import Banner from "../components/Banner";
+// import AboutUs from "../AboutUs";
 
 function App() {
     return (
-        <>
-            <App1 />
-        </>
+        <div className="app">
+            <Nav />
+            <Banner />
+            <Footer />
+        </div>
     );
 }
 
