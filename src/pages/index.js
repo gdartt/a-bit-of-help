@@ -1,20 +1,24 @@
-import "../components/App/App.scss";
+import "../styles/components/app.scss";
 
 import React from "react";
+// import { Router } from "@reach/router";
 
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import Banner from "../components/Banner";
-// import AboutUs from "../AboutUs";
+import Hero from "./hero";
+import AboutUs from "./about";
+import Projects from "./projects";
 
-function App() {
-    return (
-        <div className="app">
-            <Nav />
-            <Banner />
-            <Footer />
-        </div>
-    );
-}
+const App = () => (
+    <div className="app">
+        <Nav />
+        <main>
+            <Hero path="/" />
+            {/* <AboutUs path="about" />
+            <Projects path="projects" /> */}
+        </main>
+        <Footer />
+    </div>
+);
 
 export default App;

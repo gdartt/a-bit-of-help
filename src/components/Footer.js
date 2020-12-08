@@ -1,6 +1,6 @@
 import React from "react";
-import "./footer.scss";
-import logoFooter from "../../assets/logoFooter.svg";
+import "../styles/components/footer.scss";
+import logoFooter from "../assets/logoFooter.svg";
 
 const Footer = () => {
     const linksArray = [
