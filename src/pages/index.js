@@ -1,24 +1,17 @@
-import "../styles/components/app.scss";
-
 import React from "react";
 // import { Router } from "@reach/router";
 
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import Layout from "../components/layout";
 import Hero from "./hero";
-import AboutUs from "./about";
-import Projects from "./projects";
+
+import "../styles/components/app.scss";
 
 const App = () => (
-    <div className="app">
-        <Nav />
+    <Layout>
         <main>
             <Hero path="/" />
-            {/* <AboutUs path="about" />
-            <Projects path="projects" /> */}
         </main>
-        <Footer />
-    </div>
+    </Layout>
 );
 
 export default App;
