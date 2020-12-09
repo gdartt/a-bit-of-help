@@ -31,4 +31,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    &__font {
+        font-size: fontClamp($font-bar-min, $font-bar-max);
+        @include fontConfig($font-base, $dark-blue, $transform: none);
+    }
 }

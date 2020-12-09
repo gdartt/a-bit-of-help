@@ -1,0 +1,89 @@
+@import "../main.scss";
+
+.form__font-title {
+    font-size: fontClamp($font-minor-title-min, $font-minor-title-max);
+}
+
+.form__font-paragraph {
+    font-size: fontClamp($font-minor-paragraph-min, $font-minor-paragraph-max);
+}
+
+.form__font--input {
+    font-size: fontClamp($font-form--input-min, $font-form--input-max);
+}
+
+.form__font--textarea {
+    font-size: fontClamp($font-minor-component-min, $font-minor-component-max);
+}
+
+.form__font--btn {
+    font-size: fontClamp($font-form--btn-min, $font-form--btn-max);
+
+    &:active {
+        font-size: fontClamp(
+            $font-form--btn-active-min,
+            $font-form--btn-active-max
+        );
+    }
+}
+
+.form__font--link {
+    font-size: fontClamp($font-form--link-min, $font-form--link-max);
+}
+
+.form__font--input {
+    @include fontConfig(
+        $font-secondary,
+        $blue,
+        $weight: normal,
+        $transform: none
+    );
+}
+
+.form__font-title {
+    @include fontConfig($font-base, $dark-blue, $letters-ms, $align: center);
+}
+
+.form__font--input {
+    color: $blue;
+}
+
+.form__font--input {
+    color: $gray;
+}
+
+.form__font--textarea {
+    @include fontConfig(
+        $font-alternative,
+        $gray,
+        $letters-sx,
+        $transform: none
+    );
+}
+
+.form__font--btn {
+    @include fontConfig($font-alternative, $white, $letters-sx, $align: center);
+
+    &:hover {
+        text-align: $letters-ml;
+    }
+
+    &:active {
+        text-align: $letters-xs;
+    }
+}
+
+.form__font--link {
+    @include fontConfig(
+        $font-alternative,
+        $dark-blue,
+        $weight: normal,
+        $align: center,
+        $transform: none,
+        $decoration: underline
+    );
+}
+
+.form__font-paragraph {
+    text-align: center;
+}

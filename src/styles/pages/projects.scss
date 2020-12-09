@@ -1,0 +1,55 @@
+@import "../main.scss";
+
+.projects__font-title {
+    font-size: fontClamp($font-main-title-min, $font-main-title-max);
+}
+
+.projects__font-subtitle {
+    font-size: fontClamp($font-main-subtitle-min, $font-main-subtitle-max);
+}
+
+.projects__font-paragraph {
+    font-size: fontClamp($font-main-paragraph-min, $font-main-paragraph-max);
+}
+
+.projects__font-subtitle--minor,
+.projects__font-paragraph--minor {
+    font-size: fontClamp($font-minor-component-min, $font-minor-component-max);
+}
+
+.projects__font-subtitle--minor,
+.projects__font-paragraph,
+.projects__font-paragraph--minor {
+    @include fontConfig(
+        $font-secondary,
+        $blue,
+        $weight: normal,
+        $transform: none
+    );
+}
+
+.projects__font-title {
+    @include fontConfig($font-base, $white, $letters-ml);
+
+    span {
+        color: $light-blue;
+    }
+}
+
+.projects__font-subtitle {
+    @include fontConfig($font-secondary, $orange);
+}
+
+.projects__font-subtitle--minor,
+.projects__font-paragraph,
+.projects__font-paragraph--minor {
+    color: $orange;
+}
+
+.projects__font-paragraph {
+    color: $blue;
+}
+
+.projects__font-paragraph--minor {
+    color: $light-blue;
+}
