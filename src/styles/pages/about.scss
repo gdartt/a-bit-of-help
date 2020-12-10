@@ -1,56 +1,54 @@
 @import "../main.scss";
 
-.about__font-title--top,
-.about__font-title--bottom {
-    font-size: fontClamp($font-main-title-min, $font-main-title-max);
-}
+.about {
+    &__font-title {
+        font-size: fontClamp($font-main-title-min, $font-main-title-max);
 
-.about__font-subtitle--top,
-.about__font-subtitle--bottom {
-    font-size: fontClamp($font-main-subtitle-min, $font-main-subtitle-max);
-}
+        &--top {
+            @include fontConfig($font-base, $white, $letters-ml);
 
-.about__font-paragraph--top,
-.about__font-paragraph--bottom {
-    font-size: fontClamp($font-main-paragraph-min, $font-main-paragraph-max);
-}
+            span {
+                display: block;
+                color: $light-blue;
+            }
+        }
 
-.about__font-title--top {
-    @include fontConfig($font-base, $white, $letters-ml);
+        &--bottom {
+            @include fontConfig($font-base, $light-blue, $letters-ml);
 
-    span {
-        display: block;
-        color: $light-blue;
+            span {
+                display: block;
+                color: $dark-blue;
+            }
+        }
     }
-}
 
-.about__font-title--bottom {
-    @include fontConfig($font-base, $light-blue, $letters-ml);
+    &__font-subtitle {
+        font-size: fontClamp($font-main-subtitle-min, $font-main-subtitle-max);
 
-    span {
-        display: block;
-        color: $dark-blue;
+        &--top {
+            @include fontConfig($font-secondary, $orange);
+        }
+
+        &--bottom {
+            @include fontConfig($font-secondary, $dark-blue);
+        }
     }
-}
 
-.about__font-subtitle--top {
-    @include fontConfig($font-secondary, $orange);
-}
+    &__font-paragraph {
+        font-size: fontClamp(
+            $font-main-paragraph-min,
+            $font-main-paragraph-max
+        );
+        @include fontConfig(
+            $font-secondary,
+            $blue,
+            $weight: normal,
+            $transform: none
+        );
 
-.about__font-subtitle--bottom {
-    @include fontConfig($font-secondary, $dark-blue);
-}
-
-.about__font-paragraph--top,
-.about__font-paragraph--bottom {
-    @include fontConfig(
-        $font-secondary,
-        $blue,
-        $weight: normal,
-        $transform: none
-    );
-}
-
-.about__font-paragraph--bottom {
-    color: $dark-blue;
+        &--bottom {
+            color: $dark-blue;
+        }
+    }
 }
