@@ -1,0 +1,84 @@
+@import "../main.scss";
+
+.form {
+    &__font-title {
+        font-size: fontClamp($font-minor-title-min, $font-minor-title-max);
+        @include fontConfig(
+            $font-base,
+            $dark-blue,
+            $letters-ms,
+            $align: center
+        );
+    }
+
+    &__font-paragraph {
+        font-size: fontClamp(
+            $font-minor-paragraph-min,
+            $font-minor-paragraph-max
+        );
+        @include fontConfig(
+            $font-secondary,
+            $blue,
+            $align: center,
+            $weight: normal,
+            $transform: none
+        );
+    }
+
+    &__font-input {
+        font-size: fontClamp($font-form--input-min, $font-form--input-max);
+        @include fontConfig(
+            $font-secondary,
+            $gray,
+            $weight: normal,
+            $transform: none
+        );
+    }
+
+    &__font-textarea {
+        font-size: fontClamp(
+            $font-minor-component-min,
+            $font-minor-component-max
+        );
+        @include fontConfig(
+            $font-alternative,
+            $gray,
+            $letters-sx,
+            $transform: none
+        );
+    }
+
+    &__font-btn {
+        font-size: fontClamp($font-form--btn-min, $font-form--btn-max);
+        @include fontConfig(
+            $font-alternative,
+            $white,
+            $letters-sx,
+            $align: center
+        );
+
+        &:hover {
+            text-align: $letters-ml;
+        }
+
+        &:active {
+            font-size: fontClamp(
+                $font-form--btn-active-min,
+                $font-form--btn-active-max
+            );
+            text-align: $letters-xs;
+        }
+    }
+
+    &__font-link {
+        font-size: fontClamp($font-form--link-min, $font-form--link-max);
+        @include fontConfig(
+            $font-alternative,
+            $dark-blue,
+            $weight: normal,
+            $align: center,
+            $transform: none,
+            $decoration: underline
+        );
+    }
+}
