@@ -1,7 +1,9 @@
 @import "../main.scss";
 
 .form {
-    &__font-title {
+    background-color: $contact-form-background;
+
+    &__title {
         font-size: fontClamp($font-minor-title-min, $font-minor-title-max);
         @include fontConfig(
             $font-base,
@@ -11,7 +13,7 @@
         );
     }
 
-    &__font-paragraph {
+    &__paragraph {
         font-size: fontClamp(
             $font-minor-paragraph-min,
             $font-minor-paragraph-max
@@ -25,7 +27,7 @@
         );
     }
 
-    &__font-input {
+    &__input {
         font-size: fontClamp($font-form--input-min, $font-form--input-max);
         @include fontConfig(
             $font-secondary,
@@ -35,7 +37,7 @@
         );
     }
 
-    &__font-textarea {
+    &__textarea {
         font-size: fontClamp(
             $font-minor-component-min,
             $font-minor-component-max
@@ -48,7 +50,7 @@
         );
     }
 
-    &__font-btn {
+    &__btn {
         font-size: fontClamp($font-form--btn-min, $font-form--btn-max);
         @include fontConfig(
             $font-alternative,
@@ -58,7 +60,7 @@
         );
 
         &:hover {
-            text-align: $letters-ml;
+            letter-spacing: $letters-ml;
         }
 
         &:active {
@@ -66,11 +68,11 @@
                 $font-form--btn-active-min,
                 $font-form--btn-active-max
             );
-            text-align: $letters-xs;
+            letter-spacing: $letters-xs;
         }
     }
 
-    &__font-link {
+    &__link {
         font-size: fontClamp($font-form--link-min, $font-form--link-max);
         @include fontConfig(
             $font-alternative,

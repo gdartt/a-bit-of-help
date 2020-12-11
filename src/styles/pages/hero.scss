@@ -6,7 +6,7 @@
     width: 23vw;
     align-items: center;
 
-    &__font-title {
+    &__title {
         font-size: fontClamp($font-main-title-min, $font-main-title-max);
         @include fontConfig($font-base, $white, $letters-ml);
         padding: 1rem;

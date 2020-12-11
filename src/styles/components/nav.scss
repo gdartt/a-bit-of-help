@@ -25,7 +25,7 @@
         text-decoration: none;
     }
 
-    &__font {
+    &__list-element {
         font-size: fontClamp($font-bar-min, $font-bar-max);
         @include fontConfig($font-base, $white, $letters-ss, $align: center);
         color: transparent;
