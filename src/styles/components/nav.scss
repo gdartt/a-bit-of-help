@@ -27,8 +27,12 @@
 
     &__list-element {
         font-size: fontClamp($font-bar-min, $font-bar-max);
-        @include fontConfig($font-base, $white, $letters-ss, $align: center);
-        color: transparent;
+        @include fontConfig(
+            $font-base,
+            $color: transparent,
+            $spacing: $letters-ss,
+            $align: center
+        );
 
         &:before {
             color: $white;

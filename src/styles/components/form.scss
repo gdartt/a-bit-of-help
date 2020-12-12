@@ -2,6 +2,12 @@
 
 .form {
     background-color: $contact-form-background;
+    border-radius: 0.2rem;
+    width: clamp(320px, 35vw, 50rem);
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 
     &__title {
         font-size: fontClamp($font-minor-title-min, $font-minor-title-max);
@@ -9,6 +15,7 @@
             $font-base,
             $dark-blue,
             $letters-ms,
+            $line-s,
             $align: center
         );
     }
@@ -19,22 +26,43 @@
             $font-minor-paragraph-max
         );
         @include fontConfig(
-            $font-secondary,
+            $font-alternative,
             $blue,
+            $line: $line-m,
             $align: center,
             $weight: normal,
             $transform: none
         );
     }
 
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        grid-template-areas:
+            "name email"
+            "textarea textarea"
+            "textarea textarea"
+            "btn btn";
+    }
+
     &__input {
         font-size: fontClamp($font-form--input-min, $font-form--input-max);
         @include fontConfig(
-            $font-secondary,
-            $gray,
+            $font-alternative,
+            $dark-blue,
             $weight: normal,
             $transform: none
         );
+        @include formInputs;
+
+        &[type="text"] {
+            grid-area: name;
+        }
+
+        &[type="email"] {
+            grid-area: email;
+        }
     }
 
     &__textarea {
@@ -44,31 +72,58 @@
         );
         @include fontConfig(
             $font-alternative,
-            $gray,
+            $dark-blue,
             $letters-sx,
+            $weight: normal,
             $transform: none
         );
+        grid-area: textarea;
+        @include formInputs;
+        resize: none;
     }
 
     &__btn {
         font-size: fontClamp($font-form--btn-min, $font-form--btn-max);
         @include fontConfig(
             $font-alternative,
-            $white,
-            $letters-sx,
+            $color: transparent,
+            $spacing: $letters-sx,
+            $line: $line-xl,
             $align: center
         );
+        grid-area: btn;
+        width: 85%;
+        margin: 0 auto;
+        padding: 0.1rem 0;
+        background-color: $dark-blue;
+        border: none;
+        border-radius: 2.5rem;
+        position: relative;
+
+        &:before {
+            @include stayStill;
+            color: $white;
+            content: attr(data-btn);
+        }
 
         &:hover {
-            letter-spacing: $letters-ml;
+            background-color: $blue;
+
+            &::before {
+                letter-spacing: $letters-ml;
+            }
         }
 
         &:active {
-            font-size: fontClamp(
-                $font-form--btn-active-min,
-                $font-form--btn-active-max
-            );
-            letter-spacing: $letters-xs;
+            background-color: $pink;
+
+            &::before {
+                font-size: fontClamp(
+                    $font-form--btn-active-min,
+                    $font-form--btn-active-max
+                );
+                letter-spacing: $letters-xs;
+            }
         }
     }
 
@@ -82,5 +137,10 @@
             $transform: none,
             $decoration: underline
         );
+        cursor: pointer;
+
+        &:hover {
+            color: $pink;
+        }
     }
 }

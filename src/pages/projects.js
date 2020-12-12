@@ -8,7 +8,7 @@ const Projects = () => (
         <section
             style={{
                 minHeight: "66vh",
-                margin: "5rem 35rem",
+                margin: "5rem 5rem",
             }}
         >
             <Form />
