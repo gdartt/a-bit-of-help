@@ -5,7 +5,7 @@
         font-size: fontClamp($font-main-title-min, $font-main-title-max);
 
         &--top {
-            @include fontConfig($font-base, $white, $letters-ml);
+            @include fontConfig($font-base, $white, $letters-ml, $line-s);
 
             span {
                 display: block;

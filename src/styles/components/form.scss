@@ -3,8 +3,8 @@
 .form {
     background-color: $contact-form-background;
     border-radius: 0.2rem;
-    width: clamp(320px, 35vw, 50rem);
-    padding: 2rem 2.5rem;
+    width: clamp(320px, 30vw, 45rem);
+    padding: 2.5rem 3.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -80,6 +80,7 @@
         grid-area: textarea;
         @include formInputs;
         resize: none;
+        height: 15vh;
     }
 
     &__btn {
@@ -141,6 +142,10 @@
 
         &:hover {
             color: $pink;
+        }
+
+        &::selection {
+            background: $blue;
         }
     }
 }

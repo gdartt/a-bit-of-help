@@ -8,12 +8,13 @@
 
     &__title {
         font-size: fontClamp($font-main-title-min, $font-main-title-max);
-        @include fontConfig($font-base, $white, $letters-ml);
+        @include fontConfig($font-base, $white, $letters-ml, $line-s);
         padding: 1rem;
 
         span {
             display: block;
             color: $blue;
+            margin-top: 1.75rem;
         }
     }
 }

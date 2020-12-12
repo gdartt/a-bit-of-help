@@ -35,15 +35,8 @@
         );
 
         &:before {
+            @include stayStill;
             color: $white;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            white-space: nowrap;
-            transition: 0.1s;
             content: attr(data-navitemcontent);
         }
 

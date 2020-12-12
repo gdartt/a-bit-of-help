@@ -17,8 +17,6 @@ const Form = () => (
             <textarea
                 name=""
                 id=""
-                cols="30"
-                rows="10"
                 className="form__textarea"
                 placeholder="Na dobry początek zacznij od tego, czego potrzebuje Twoja organizacja..."
             ></textarea>
