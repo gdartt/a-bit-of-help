@@ -1,3 +1,7 @@
 $font-base: "Rubik", sans-serif;
 $font-secondary: "Noto Sans", sans-serif;
 $font-alternative: "Lato", sans-serif;
+
+*::selection {
+    background: $pink;
+}

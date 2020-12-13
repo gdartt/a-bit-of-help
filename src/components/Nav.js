@@ -13,7 +13,7 @@ const navNames = [
 
 const navLinks = navNames.map((item) => (
     <Link to={item.link} className="nav__item" key={item.link}>
-        <li className="nav__font" data-navitemcontent={item.text}>
+        <li className="nav__list-element" data-navitemcontent={item.text}>
             {item.text}
         </li>
     </Link>

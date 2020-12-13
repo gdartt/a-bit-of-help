@@ -3,6 +3,7 @@
     $family,
     $color,
     $spacing: 0,
+    $line: 1.5,
     $weight: bold,
     $align: left,
     $transform: uppercase,
@@ -11,8 +12,29 @@
     font-family: $family;
     color: $color;
     letter-spacing: $spacing;
+    line-height: $line;
     font-weight: $weight;
     text-align: $align;
     text-transform: $transform;
     text-decoration: $decoration;
+}
+
+// frozen design
+@mixin stayStill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    transition: 0.1s;
+}
+
+// form inputs unification
+@mixin formInputs {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 2px;
 }

@@ -1,11 +1,11 @@
 @import "../main.scss";
 
 .about {
-    &__font-title {
+    &__title {
         font-size: fontClamp($font-main-title-min, $font-main-title-max);
 
         &--top {
-            @include fontConfig($font-base, $white, $letters-ml);
+            @include fontConfig($font-base, $white, $letters-ml, $line-s);
 
             span {
                 display: block;
@@ -23,7 +23,7 @@
         }
     }
 
-    &__font-subtitle {
+    &__subtitle {
         font-size: fontClamp($font-main-subtitle-min, $font-main-subtitle-max);
 
         &--top {
@@ -35,7 +35,7 @@
         }
     }
 
-    &__font-paragraph {
+    &__paragraph {
         font-size: fontClamp(
             $font-main-paragraph-min,
             $font-main-paragraph-max

@@ -25,21 +25,18 @@
         text-decoration: none;
     }
 
-    &__font {
+    &__list-element {
         font-size: fontClamp($font-bar-min, $font-bar-max);
-        @include fontConfig($font-base, $white, $letters-ss, $align: center);
-        color: transparent;
+        @include fontConfig(
+            $font-base,
+            $color: transparent,
+            $spacing: $letters-ss,
+            $align: center
+        );
 
         &:before {
+            @include stayStill;
             color: $white;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            white-space: nowrap;
-            transition: 0.1s;
             content: attr(data-navitemcontent);
         }
 
