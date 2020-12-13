@@ -1,6 +1,7 @@
 @import "../main.scss";
 
 .form {
+    position: relative;
     background-color: $contact-form-background;
     border-radius: 0.2rem;
     width: clamp(32rem, 30vw, 47.2rem);
@@ -8,6 +9,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    z-index: 2;
 
     &__title {
         font-size: fontClamp($font-minor-title-min, $font-minor-title-max);

@@ -5,8 +5,8 @@ import Form from "../components/Form";
 
 import { joinData } from "../db/join";
 
-import background from "../assets/join/Zglos-projekt.png";
-import backgroundx2 from "../assets/join/Zglos-projekt@2x.png";
+import background from "../assets/join/join_bcg.png";
+import backgroundx2 from "../assets/join/join_bcg@2x.png";
 import "../styles/pages/join.scss";
 
 const Join = () => (
@@ -17,7 +17,7 @@ const Join = () => (
                 className="join__background"
                 srcSet={`${backgroundx2} 2x`}
                 src={background}
-                alt="Join Us!"
+                alt="ContactUs!"
             />
         </section>
     </Layout>

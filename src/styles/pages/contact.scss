@@ -1,14 +1,14 @@
 @import "../main.scss";
 
-.join {
+.contact {
     position: relative;
     padding-left: 10rem;
 
     &__background {
         position: absolute;
-        right: -5%;
-        top: 43%;
+        right: 0;
+        top: 50%;
         transform: translateY(-50%);
-        height: 175%;
+        height: 185%;
     }
 }
