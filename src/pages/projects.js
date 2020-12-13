@@ -1,19 +1,7 @@
 import React from "react";
-import Layout from "../components/layout";
-import Form from "../components/Form";
 
-const Projects = () => (
-    // temp page component for tests
-    <Layout>
-        <section
-            style={{
-                minHeight: "66vh",
-                margin: "5rem 10rem",
-            }}
-        >
-            <Form />
-        </section>
-    </Layout>
-);
+import Layout from "../components/layout";
+
+const Projects = () => <Layout>Future components HERE</Layout>;
 
 export default Projects;

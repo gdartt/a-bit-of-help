@@ -3,11 +3,11 @@
 .form {
     background-color: $contact-form-background;
     border-radius: 0.2rem;
-    width: clamp(320px, 30vw, 45rem);
-    padding: 2.5rem 3.5rem;
+    width: clamp(320px, 30vw, 47.2rem);
+    padding: 2rem 2.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
 
     &__title {
         font-size: fontClamp($font-minor-title-min, $font-minor-title-max);
@@ -23,16 +23,20 @@
     &__paragraph {
         font-size: fontClamp(
             $font-minor-paragraph-min,
-            $font-minor-paragraph-max
+            $font-minor-paragraph-max - 0.5
         );
         @include fontConfig(
-            $font-alternative,
+            $font-secondary,
             $blue,
             $line: $line-m,
             $align: center,
             $weight: normal,
             $transform: none
         );
+
+        &:not(:first-of-type) {
+            margin-top: 1rem;
+        }
     }
 
     &__form {
@@ -44,6 +48,7 @@
             "textarea textarea"
             "textarea textarea"
             "btn btn";
+        padding-top: 1rem;
     }
 
     &__input {
@@ -81,6 +86,7 @@
         @include formInputs;
         resize: none;
         height: 15vh;
+        margin-bottom: 1rem;
     }
 
     &__btn {
