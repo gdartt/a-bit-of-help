@@ -7,6 +7,9 @@ export const joinData = {
         ],
         textarea:
             "Napisz nam coś o sobie oraz jakie umiejętności chcesz rozwijać pracując dla naszej fundacj. Niebawem się z Tobą skontaktujemy 😃✌",
-        link: "Lista poszukiwanych wolontariatów",
+        link: {
+            path: "#",
+            content: "Lista poszukiwanych wolontariatów",
+        },
     },
 };
