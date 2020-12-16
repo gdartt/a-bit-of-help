@@ -16,7 +16,7 @@ const AboutUs = () => {
                     <h3 className="about__subtitle about__subtitle--top">
                         Innowacyjne rozwiązania dla organizacji non-profit
                     </h3>
-                    <ul>
+                    <ul className="about__list">
                         {aboutUsData.innovativeSolutions.map((el, index) => (
                             <li
                                 key={index}
