@@ -38,3 +38,16 @@
     border: none;
     border-radius: 2px;
 }
+
+// bullet list styling
+@mixin bulletList {
+    display: inline-block;
+    position: absolute;
+    top: fontClamp($margin / 12, $margin / 6);
+    left: -$margin + rem;
+    content: "";
+    border-radius: 50%;
+    background-color: $white;
+    width: fontClamp($margin / 5, $margin / 2);
+    height: fontClamp($margin / 5, $margin / 2);
+}
