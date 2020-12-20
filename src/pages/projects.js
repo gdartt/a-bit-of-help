@@ -1,6 +1,7 @@
 import React from "react";
 
 import Layout from "../components/layout";
+import Project from "../components/Project";
 
 import "../styles/pages/projects.scss";
 import { projectsData } from "../db/projects";
@@ -26,6 +27,11 @@ const Projects = () => (
                         </li>
                     ))}
                 </ul>
+            </div>
+            <div className="projects__wrapper--projects-grid">
+                {projectsData.projectsList.map((project) => (
+                    <Project project={project} key={project.photoAlt} />
+                ))}
             </div>
         </section>
     </Layout>
