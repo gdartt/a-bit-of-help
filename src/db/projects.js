@@ -9,28 +9,40 @@ export const projectsData = {
     ],
     projectsList: [
         {
-            photo: "/static/project1.jpg",
+            photo: {
+                normal: "project1",
+                retina: "project1@2x",
+            },
             photoAlt: "Project one",
             title: "Lorem Ipsum donor",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
-            photo: "/static/project2.jpg",
+            photo: {
+                normal: "project2",
+                retina: "project2@2x",
+            },
             photoAlt: "Project two",
             title: "Lorem",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
-            photo: "/static/project3.jpg",
+            photo: {
+                normal: "project3",
+                retina: "project3@2x",
+            },
             photoAlt: "Project three",
             title: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
-            photo: "/static/project4.jpg",
+            photo: {
+                normal: "project4",
+                retina: "project4@2x",
+            },
             photoAlt: "Project four",
             title: "Lorem Ipsum",
             description:

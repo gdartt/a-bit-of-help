@@ -72,7 +72,13 @@
                 $font-minor-component-min,
                 $font-minor-component-max
             );
-            color: $light-blue;
+            @include fontConfig(
+                $font-secondary,
+                $light-blue,
+                $line: $line-m,
+                $weight: normal,
+                $transform: none
+            );
         }
     }
 }

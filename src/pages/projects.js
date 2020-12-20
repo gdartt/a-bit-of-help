@@ -1,10 +1,33 @@
 import React from "react";
 
 import Layout from "../components/layout";
-import Project from "../components/Project";
+import ProjectCard from "../components/ProjectCard";
 
 import "../styles/pages/projects.scss";
 import { projectsData } from "../db/projects";
+
+function importAll(r) {
+    return r.keys().map(r);
+}
+
+const images = importAll(
+    require.context("../assets/projects", false, /\.(png|jpe?g|svg)$/)
+);
+
+const projectsGrid = () =>
+    projectsData.projectsList.map((project) => {
+        const photos = {};
+        photos.x1 = images.find((element) =>
+            element.includes(project.photo.normal)
+        );
+        photos.x2 = images.find((element) =>
+            element.includes(project.photo.retina)
+        );
+
+        return (
+            <ProjectCard project={project} photos={photos} key={photos.x1} />
+        );
+    });
 
 const Projects = () => (
     <Layout>
@@ -29,9 +52,7 @@ const Projects = () => (
                 </ul>
             </div>
             <div className="projects__wrapper--projects-grid">
-                {projectsData.projectsList.map((project) => (
-                    <Project project={project} key={project.photoAlt} />
-                ))}
+                {projectsGrid()}
             </div>
         </section>
     </Layout>
