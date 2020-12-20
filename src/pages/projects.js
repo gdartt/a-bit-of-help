@@ -17,6 +17,7 @@ const images = importAll(
 const projectsGrid = () =>
     projectsData.projectsList.map((project) => {
         const photos = {};
+
         photos.x1 = images.find((element) =>
             element.includes(project.photo.normal)
         );

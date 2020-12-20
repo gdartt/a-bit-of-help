@@ -2,8 +2,7 @@
 
 .projects {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    column-gap: 2rem;
+    grid-template-columns: 2fr 2fr;
 
     &__title {
         font-size: fontClamp($font-main-title-min, $font-main-title-max);
@@ -32,6 +31,7 @@
                 $weight: normal,
                 $transform: none
             );
+            margin: 0.5em 0;
         }
     }
 
@@ -79,6 +79,44 @@
                 $weight: normal,
                 $transform: none
             );
+        }
+    }
+
+    &__wrapper {
+        &--list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 8rem;
+            margin-top: -6rem;
+        }
+
+        &--projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6rem;
+            padding-top: 4rem;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__project-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__project-img {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transform: scale(1.1);
+            transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
+        }
+
+        &:hover img {
+            transform: scale(1);
         }
     }
 }
