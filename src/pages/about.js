@@ -2,8 +2,8 @@ import React from "react";
 
 import Layout from "../components/layout";
 
-import "../styles/pages/about.scss";
 import { aboutUsData } from "../db/about";
+import "../styles/pages/about.scss";
 
 const AboutUs = () => {
     return (
