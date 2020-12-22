@@ -1,3 +1,13 @@
+function importAll(r) {
+    return r.keys().map(r);
+}
+
+const images = importAll(
+    require.context("../assets/projects", false, /\.(png|jpe?g|svg)$/)
+);
+
+const findPhoto = (name) => images.find((item) => item.includes(name));
+
 export const projectsData = {
     offerList: [
         "Stworzymy stronę internetową.",
@@ -10,8 +20,8 @@ export const projectsData = {
     projectsList: [
         {
             photo: {
-                normal: "project1",
-                retina: "project1@2x",
+                normal: findPhoto("project1"),
+                retina: findPhoto("project1@2x"),
             },
             photoAlt: "Project one",
             title: "Lorem Ipsum donor",
@@ -20,8 +30,8 @@ export const projectsData = {
         },
         {
             photo: {
-                normal: "project2",
-                retina: "project2@2x",
+                normal: findPhoto("project2"),
+                retina: findPhoto("project2@2x"),
             },
             photoAlt: "Project two",
             title: "Lorem",
@@ -30,8 +40,8 @@ export const projectsData = {
         },
         {
             photo: {
-                normal: "project3",
-                retina: "project3@2x",
+                normal: findPhoto("project3"),
+                retina: findPhoto("project3@2x"),
             },
             photoAlt: "Project three",
             title: "Lorem Ipsum Lorem Ipsum Lorem Ipsum",
@@ -40,8 +50,8 @@ export const projectsData = {
         },
         {
             photo: {
-                normal: "project4",
-                retina: "project4@2x",
+                normal: findPhoto("project4"),
+                retina: findPhoto("project4@2x"),
             },
             photoAlt: "Project four",
             title: "Lorem Ipsum",

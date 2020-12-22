@@ -1,15 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import "../styles/components/nav.scss";
-import logo from "../assets/logoMain.svg";
+import { navNames } from "../db/nav";
 
-const navNames = [
-    { text: "o nas", link: "/about" },
-    { text: "projekty", link: "/projects" },
-    { text: "dołącz do nas", link: "/join" },
-    { text: "kontakt", link: "/contact" },
-];
+import logo from "../assets/logoMain.svg";
+import "../styles/components/nav.scss";
 
 const navLinks = navNames.map((item) => (
     <Link to={item.link} className="nav__item" key={item.link}>
