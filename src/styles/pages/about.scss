@@ -3,6 +3,7 @@
 .about {
     &__title {
         font-size: fontClamp($font-main-title-min, $font-main-title-max);
+        margin-bottom: 4rem;
 
         &--top {
             @include fontConfig($font-base, $white, $letters-ml, $line-s);
@@ -25,6 +26,7 @@
 
     &__subtitle {
         font-size: fontClamp($font-main-subtitle-min, $font-main-subtitle-max);
+        margin-bottom: 2.5rem;
 
         &--top {
             @include fontConfig($font-secondary, $orange);
@@ -35,6 +37,12 @@
         }
     }
 
+    &__list {
+        list-style-type: disc;
+        list-style-position: outside;
+        padding-left: $margin + rem;
+    }
+
     &__paragraph {
         font-size: fontClamp(
             $font-main-paragraph-min,
@@ -43,9 +51,23 @@
         @include fontConfig(
             $font-secondary,
             $blue,
+            $line: $line-m,
             $weight: normal,
             $transform: none
         );
+        position: relative;
+
+        &:not(:last-of-type) {
+            margin-bottom: 1rem;
+        }
+
+        &::marker {
+            color: transparent;
+        }
+
+        &::before {
+            @include bulletList;
+        }
 
         &--bottom {
             color: $dark-blue;

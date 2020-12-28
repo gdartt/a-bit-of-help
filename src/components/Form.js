@@ -2,18 +2,24 @@ import React from "react";
 
 import "../styles/components/form.scss";
 
-const Form = (props) => {
-    const { title, paragraphs, textarea, link } = props.data;
+const Form = ({ data: { title, paragraphs, textarea, link } }) => {
+    const paragraphsContainer = paragraphs.map((paragraph) => (
+        <p className="form__paragraph" key={paragraph.slice(0, 33)}>
+            {paragraph}
+        </p>
+    ));
+
+    const checkLink = link && (
+        <a href={link.path} className="form__link">
+            {link.content}
+        </a>
+    );
 
     return (
         <div className="form">
             <h1 className="form__title">{title}</h1>
             <div className="form__paragraph-container">
-                {paragraphs.map((paragraph) => (
-                    <p className="form__paragraph" key={paragraph.slice(0, 33)}>
-                        {paragraph}
-                    </p>
-                ))}
+                {paragraphsContainer}
             </div>
             {/* TODO: dodac wysylanie form */}
             <form action="#" className="form__form">
@@ -33,11 +39,7 @@ const Form = (props) => {
                     wyślij
                 </button>
             </form>
-            {link ? (
-                <a href={link.path} className="form__link">
-                    {link.content}
-                </a>
-            ) : null}
+            {checkLink}
         </div>
     );
 };
