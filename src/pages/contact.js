@@ -12,7 +12,7 @@ import "../styles/pages/contact.scss";
 const Contact = () => (
     <Layout>
         <section className="container contact">
-            <Form data={contactData.formData} />
+            <Form data={contactData.formData} emailTitle="Beneficjent" />
             <img
                 className="contact__background"
                 srcSet={`${backgroundx2} 2x`}
