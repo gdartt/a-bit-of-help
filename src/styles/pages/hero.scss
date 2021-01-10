@@ -9,6 +9,8 @@
         font-size: fontClamp($font-main-title-min, $font-main-title-max);
         @include fontConfig($font-base, $white, $letters-ml, $line-s);
         padding: 1rem;
+        position: relative;
+        z-index: 1;
 
         span {
             display: block;
