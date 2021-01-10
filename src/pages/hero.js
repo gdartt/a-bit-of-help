@@ -1,5 +1,7 @@
 import React from "react";
 
+import HeroBackground from "../components/HeroBackground";
+
 import "../styles/pages/hero.scss";
 
 const Hero = () => (
@@ -11,8 +13,7 @@ const Hero = () => (
                     <span>Wsparcie dla organizacji pozarządowych</span>
                 </h1>
             </div>
-            {/* temp div placeholder above */}
-            <div className="background-image"></div>
+            {HeroBackground}
         </header>
     </main>
 );
