@@ -1,6 +1,13 @@
 @import "../main.scss";
 
 .about {
+    display: grid;
+    grid-template-columns: 45fr 55fr;
+
+    .text {
+        margin: 6rem 0;
+    }
+
     &__title {
         font-size: fontClamp($font-main-title-min, $font-main-title-max);
         margin-bottom: 4rem;
@@ -72,5 +79,17 @@
         &--bottom {
             color: $dark-blue;
         }
+    }
+
+    &__background {
+        width: 100%;
+        right: -10rem;
+    }
+
+    &__bottom--container {
+        background-color: $contact-form-background;
+    }
+
+    .about--bottom {
     }
 }
