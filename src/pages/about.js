@@ -41,7 +41,7 @@ const AboutUs = () => {
                 />
             </section>
             <div className="about__bottom--container">
-                <section className="container about about--bottom">
+                <section className="container about">
                     <section className="text">
                         <h2 className="about__title about__title--bottom">
                             A bit of help<span>Team</span>
@@ -53,7 +53,7 @@ const AboutUs = () => {
                             {aboutUsData.whomWeHelp.map((el, index) => (
                                 <li
                                     key={index}
-                                    className="about__paragraph about__paragraph--top"
+                                    className="about__paragraph about__paragraph--bottom"
                                 >
                                     {el}
                                 </li>

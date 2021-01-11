@@ -78,18 +78,18 @@
 
         &--bottom {
             color: $dark-blue;
+
+            &::before {
+                background-color: $orange;
+            }
         }
     }
 
     &__background {
         width: 100%;
-        right: -10rem;
     }
 
     &__bottom--container {
         background-color: $contact-form-background;
-    }
-
-    .about--bottom {
     }
 }
