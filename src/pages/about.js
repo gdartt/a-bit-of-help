@@ -14,7 +14,7 @@ import "../styles/pages/about.scss";
 const AboutUs = () => {
     return (
         <Layout>
-            <section className="container about">
+            <section className="container about about--puzzle">
                 <section className="text">
                     <h2 className="about__title about__title--top">
                         A bit of help<span>Fundacja</span>
@@ -67,7 +67,6 @@ const AboutUs = () => {
                     alt="About Us!"
                     />
                 </section>
-
             </div>
         </Layout>
     );
