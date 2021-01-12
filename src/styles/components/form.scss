@@ -65,10 +65,12 @@
 
         &[type="text"] {
             grid-area: name;
+            @include formValidation;
         }
 
         &[type="email"] {
             grid-area: email;
+            @include formValidation;
         }
     }
 
@@ -89,6 +91,7 @@
         resize: none;
         height: 15vh;
         margin-bottom: 1rem;
+        @include formValidation;
     }
 
     &__btn {

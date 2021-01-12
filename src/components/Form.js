@@ -57,6 +57,7 @@ const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
                     type="text"
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Imię"
+                    minlength="3"
                     required
                 />
                 <input
@@ -74,6 +75,7 @@ const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder={textarea}
+                    minlength="10"
                     required
                 ></textarea>
                 <button className="form__btn" data-btn="wyślij">
