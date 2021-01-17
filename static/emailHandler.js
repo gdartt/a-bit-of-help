@@ -52,6 +52,7 @@ router.post("/access", (req, res, next) => {
     });
 });
 
+// NOTE: to run use: node emailHandler.js
 const app = express();
 app.use(cors());
 app.use(express.json());

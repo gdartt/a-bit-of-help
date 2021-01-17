@@ -36,7 +36,7 @@
         }
 
         &--bottom {
-            @include fontConfig($font-base, $light-blue, $letters-ml);
+            @include fontConfig($font-base, $light-blue, $letters-ml, $line-s);
 
             span {
                 display: block;
