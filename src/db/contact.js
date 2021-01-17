@@ -4,7 +4,7 @@ export const contactData = {
         paragraphs: [
             "Dla nas przyszłość jest zawsze świetlana i chcemy sprawić, żeby Twoja też taka była! Napisz do nas i zamień swoje marzenia na konkretny plan.",
         ],
-        textarea:
+        textareaPlaceholder:
             "Na dobry początek zacznij od tego, czego potrzebuje Twoja organizacja...",
     },
 };
