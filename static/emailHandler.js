@@ -1,22 +1,21 @@
-let express = require("express");
-var router = express.Router();
-let nodemailer = require("nodemailer");
-var cors = require("cors");
-// NOTE: file containing email connection configuration
-const creds = require("./config");
+const express = require("express");
+const router = express.Router();
+const nodemailer = require("nodemailer");
+const cors = require("cors");
+const config = require("./config");
 
-var transport = {
-    host: creds.HOST,
+// NOTE: documentation: https://nodemailer.com/smtp/
+const transport = {
+    host: config.HOST,
     port: 587,
     secure: false,
     auth: {
-        user: creds.USER,
-        pass: creds.PASS,
+        user: config.USER,
+        pass: config.PASS,
     },
 };
 
-var transporter = nodemailer.createTransport(transport);
-// NOTE: verifying the connection configuration
+const transporter = nodemailer.createTransport(transport);
 transporter.verify(function (error, success) {
     if (error) {
         console.log(error);
@@ -28,19 +27,18 @@ transporter.verify(function (error, success) {
 });
 
 router.post("/access", (req, res, next) => {
-    var name = req.body.name;
-    var email = req.body.email;
-    var message = req.body.message;
-    var subject = req.body.emailTitle;
+    const name = req.body.name;
+    const email = req.body.email;
+    const message = req.body.message;
+    const subject = req.body.emailTitle;
 
-    var mail = {
-        from: creds.EMAIL_FROM,
-        to: creds.EMAIL_TO,
-        subject: `${subject}: ${name}`,
-        text: `Email: ${email} \nWiadomość: ${message}`,
+    const mail = {
+        from: config.EMAIL_FROM,
+        to: config.EMAIL_TO,
+        subject: `${subject}:  ${name}`,
+        text: `Email:  ${email} \nWiadomość:  ${message}`,
     };
 
-    // NOTE: server response
     transporter.sendMail(mail, (err, data) => {
         if (err) {
             res.json({

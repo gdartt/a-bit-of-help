@@ -48,7 +48,14 @@
     }
 
     &:invalid {
-        border-image: linear-gradient(45deg, $pink 66%, $blue 90%) 1;
+        border-image: linear-gradient(
+                45deg,
+                $orange,
+                $pink 20%,
+                $pink 65%,
+                $blue 80%
+            )
+            1;
     }
 }
 
