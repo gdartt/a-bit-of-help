@@ -27,3 +27,4 @@ package-lock.json
 .cache
 debug.log
 redux*
+static/config.js

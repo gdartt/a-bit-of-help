@@ -39,6 +39,26 @@
     border-radius: 2px;
 }
 
+// form validation
+@mixin formValidation {
+    border: 2px solid transparent;
+
+    &:valid {
+        border-image: linear-gradient(45deg, $green, $light-green) 1;
+    }
+
+    &:invalid {
+        border-image: linear-gradient(
+                45deg,
+                $orange,
+                $pink 20%,
+                $pink 65%,
+                $blue 80%
+            )
+            1;
+    }
+}
+
 // bullet list styling
 @mixin bulletList {
     display: inline-block;

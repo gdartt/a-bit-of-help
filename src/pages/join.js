@@ -12,7 +12,7 @@ import "../styles/pages/join.scss";
 const Join = () => (
     <Layout>
         <section className="container join">
-            <Form data={joinData.formData} />
+            <Form data={joinData.formData} emailTitle="Wolontariusz" />
             <img
                 className="join__background"
                 srcSet={`${backgroundx2} 2x`}
