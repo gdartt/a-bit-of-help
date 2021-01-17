@@ -16,14 +16,15 @@ const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log({ emailTitle, name, email, message });
         axios({
             method: "POST",
             // TODO: url do dodania
-            url: "http://localhost:3333/send",
+            url: "http://localhost:3002/access",
             data: { emailTitle, name, email, message },
         }).then((response) => {
             // TODO: dodac poprawna obsluge odpowiedzi
-            if (response.data.statusText === "success") {
+            if (response.data.status === "success") {
                 alert("Wiadomość wysłana!");
                 formReset();
             } else if (response.data.status === "fail") {
@@ -57,7 +58,7 @@ const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
                     type="text"
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Imię"
-                    minlength="3"
+                    minLength="3"
                     required
                 />
                 <input
@@ -75,7 +76,7 @@ const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder={textarea}
-                    minlength="10"
+                    minLength="10"
                     required
                 ></textarea>
                 <button className="form__btn" data-btn="wyślij">
