@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import swal from "sweetalert";
+
+import { formData } from "../db/form";
 
 import "../styles/components/form.scss";
 
@@ -16,20 +19,19 @@ const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({ emailTitle, name, email, message });
         axios({
             method: "POST",
-            // TODO: url do dodania
+            // TODO: url do zmiany
             url: "http://localhost:3002/access",
             data: { emailTitle, name, email, message },
         }).then((response) => {
-            // TODO: dodac poprawna obsluge odpowiedzi
-            if (response.data.status === "success") {
-                alert("Wiadomość wysłana!");
-                formReset();
-            } else if (response.data.status === "fail") {
-                alert("Coś poszło nie tak... Nie udało się wysłac wiadomości.");
-            }
+            const result = response.data.status;
+            swal(
+                formData[result].title,
+                formData[result].message,
+                formData[result].icon
+            );
+            result !== "fail" && formReset();
         });
     };
 
@@ -70,8 +72,6 @@ const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
                     required
                 />
                 <textarea
-                    name=""
-                    id=""
                     className="form__textarea"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
