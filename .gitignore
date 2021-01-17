@@ -26,9 +26,5 @@ yarn-error.log*
 package-lock.json
 .cache
 debug.log
-<<<<<<< HEAD
 redux*
 static/config.js
-=======
-redux*
->>>>>>> improved merging
