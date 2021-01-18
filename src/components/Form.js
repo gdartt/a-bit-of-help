@@ -2,37 +2,48 @@ import React, { useState } from "react";
 import axios from "axios";
 import swal from "sweetalert";
 
-import { formData } from "../db/form";
+import { messageSend } from "../db/form";
 
 import "../styles/components/form.scss";
 
-const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+const Form = ({
+    data: { title, paragraphs, textareaPlaceholder, link },
+    emailTitle,
+}) => {
+    const [isSubmitting, setIsSubmiting] = useState(false);
 
-    const formReset = () => {
-        setName("");
-        setEmail("");
-        setMessage("");
+    const successfullySent = () => {
+        swal(...Object.values(messageSend.success));
     };
 
-    const handleSubmit = (e) => {
+    const failureSent = () => {
+        swal(...Object.values(messageSend.fail));
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        axios({
-            method: "POST",
-            // TODO: url do zmiany
-            url: "http://localhost:3002/access",
-            data: { emailTitle, name, email, message },
-        }).then((response) => {
-            const result = response.data.status;
-            swal(
-                formData[result].title,
-                formData[result].message,
-                formData[result].icon
+        if (isSubmitting) return;
+        setIsSubmiting(true);
+
+        const { name, email, message } = e.target.elements;
+        try {
+            await axios.post(
+                // TODO: url do zmiany
+                "http://localhost:3002/access",
+                {
+                    emailTitle,
+                    name: name.value,
+                    email: email.value,
+                    message: message.value,
+                }
             );
-            result !== "fail" && formReset();
-        });
+            successfullySent();
+            e.target.reset();
+        } catch (err) {
+            failureSent();
+        } finally {
+            setIsSubmiting(false);
+        }
     };
 
     const paragraphsContainer = paragraphs.map((paragraph) => (
@@ -56,31 +67,32 @@ const Form = ({ data: { title, paragraphs, textarea, link }, emailTitle }) => {
             <form action="#" className="form__form" onSubmit={handleSubmit}>
                 <input
                     className="form__input"
-                    value={name}
+                    name="name"
                     type="text"
-                    onChange={(e) => setName(e.target.value)}
                     placeholder="Imię"
                     minLength="3"
                     required
                 />
                 <input
                     className="form__input"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
                     type="email"
+                    name="email"
                     placeholder="Email"
                     required
                 />
                 <textarea
                     className="form__textarea"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder={textarea}
+                    placeholder={textareaPlaceholder}
                     minLength="10"
+                    name="message"
                     required
-                ></textarea>
-                <button className="form__btn" data-btn="wyślij">
-                    wyślij
+                />
+                <button
+                    className="form__btn"
+                    data-btn={isSubmitting ? "wysyłanie..." : "wyślij"}
+                    disabled={isSubmitting}
+                >
+                    {isSubmitting ? "wysyłanie..." : "wyślij"}
                 </button>
             </form>
             {checkLink}

@@ -118,7 +118,7 @@
             content: attr(data-btn);
         }
 
-        &:hover {
+        &:hover:not(:disabled) {
             background-color: $blue;
 
             &::before {
@@ -136,6 +136,10 @@
                 );
                 letter-spacing: $letters-xs;
             }
+        }
+
+        &:disabled {
+            background-color: $gray;
         }
     }
 
