@@ -41,13 +41,9 @@ router.post("/access", (req, res, next) => {
 
     transporter.sendMail(mail, (err, data) => {
         if (err) {
-            res.json({
-                status: "fail",
-            });
+            res.status(400).end();
         } else {
-            res.json({
-                status: "success",
-            });
+            res.end();
         }
     });
 });

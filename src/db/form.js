@@ -1,4 +1,4 @@
-export const formData = {
+export const messageSend = {
     success: {
         title: "Hej ho! Wiadomość wysłana! 📩",
         message:
