@@ -79,6 +79,7 @@
             $transform: none
         );
         position: relative;
+        z-index: 3;
 
         &:not(:last-of-type) {
             margin-bottom: 1rem;
