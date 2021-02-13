@@ -3,6 +3,7 @@
 .about {
     display: grid;
     grid-template-columns: 45fr 55fr;
+    position: relative;
 
     &--puzzle {
         position: relative;
@@ -77,6 +78,7 @@
             $transform: none
         );
         position: relative;
+        z-index: 3;
 
         &:not(:last-of-type) {
             margin-bottom: 1rem;
@@ -106,8 +108,15 @@
     }
 
     &__background {
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        right: 5%;
+        top: 52%;
+        transform: translateY(-50%);
+        height: 90%;
+
+        &:last-of-type {
+            top: 55%;
+        }
     }
 
     &__bottom--container {
