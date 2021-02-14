@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
-import swal from "sweetalert";
-
-import { messageSend } from "../db/form";
+import { createNewMail } from "../api/createNewMail";
 
 import "../styles/components/form.scss";
 
@@ -12,38 +9,22 @@ const Form = ({
 }) => {
     const [isSubmitting, setIsSubmiting] = useState(false);
 
-    const successfullySent = () => {
-        swal(...Object.values(messageSend.success));
-    };
-
-    const failureSent = () => {
-        swal(...Object.values(messageSend.fail));
-    };
-
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (isSubmitting) return;
         setIsSubmiting(true);
 
         const { name, email, message } = e.target.elements;
-        try {
-            await axios.post(
-                // TODO: url do zmiany
-                "http://localhost:3002/access",
-                {
-                    emailTitle,
-                    name: name.value,
-                    email: email.value,
-                    message: message.value,
-                }
-            );
-            successfullySent();
-            e.target.reset();
-        } catch (err) {
-            failureSent();
-        } finally {
-            setIsSubmiting(false);
-        }
+
+        createNewMail(e, {
+            emailTitle,
+            name: name.value,
+            email: email.value,
+            message: message.value,
+        });
+
+        // TODO: do poprawy
+        setIsSubmiting(false);
     };
 
     const paragraphsContainer = paragraphs.map((paragraph) => (
