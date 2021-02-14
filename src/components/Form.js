@@ -12,8 +12,8 @@ const Form = ({
     const handleSubmit = (e) => {
         e.preventDefault();
         if (isSubmitting) return;
-        setIsSubmiting(true);
 
+        setIsSubmiting(true);
         const { name, email, message } = e.target.elements;
 
         createNewMail(e, {
@@ -21,10 +21,7 @@ const Form = ({
             name: name.value,
             email: email.value,
             message: message.value,
-        });
-
-        // TODO: do poprawy
-        setIsSubmiting(false);
+        }).then((respond) => setIsSubmiting(respond));
     };
 
     const paragraphsContainer = paragraphs.map((paragraph) => (
