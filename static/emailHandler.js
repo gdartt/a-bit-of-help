@@ -20,9 +20,7 @@ transporter.verify(function (error, success) {
     if (error) {
         console.log(error);
     } else {
-        console.log(
-            "Serwer śmiga jak dzik po żołędziach i chętnie wyśle jakiś mail!"
-        );
+        console.log("Serwer śmiga jak dzik po żołędziach!");
     }
 });
 
