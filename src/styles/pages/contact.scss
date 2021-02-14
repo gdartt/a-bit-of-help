@@ -2,13 +2,37 @@
 
 .contact {
     position: relative;
-    padding-left: 10rem;
+    padding-left: 5rem;
 
     &__background {
         position: absolute;
-        right: 0;
+        right: 0%;
         top: 50%;
         transform: translateY(-50%);
         height: 185%;
+    }
+
+    @include respond(desktop) {
+        &__background {
+            height: 160%;
+            right: -5%;
+        }
+    }
+
+    @include respond(tab-land) {
+        padding-left: 0;
+
+        &__background {
+            height: 150%;
+            right: -10%;
+        }
+    }
+
+    @include respond(tab-port) {
+        min-height: 80vh;
+
+        &__background {
+            display: none;
+        }
     }
 }
