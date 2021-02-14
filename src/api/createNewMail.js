@@ -10,17 +10,16 @@ const failureSent = () => {
     swal(...Object.values(messageSend.fail));
 };
 
-export const createNewMail = (e, mailForm) => {
+export const createNewMail = async (e, mailForm) => {
     // NOTE: url do zmiany
-    axios
-        .post("http://localhost:3002/access44", mailForm)
+    return axios
+        .post("http://localhost:3002/access11", mailForm)
         .then(() => {
             successfullySent();
             e.target.reset();
         })
-        .catch((err) => {
+        .catch(() => {
             failureSent();
-        });
+        })
+        .then(() => false);
 };
-
-// export default createNewMail;

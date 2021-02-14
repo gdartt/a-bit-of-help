@@ -26,5 +26,5 @@ yarn-error.log*
 package-lock.json
 .cache
 debug.log
-redux*
+redux
 static/config.js
